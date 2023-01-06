@@ -15,7 +15,11 @@
   margin-top: 7px;
   display: block;
   width: 100%;
-  color: black;
+  color: rgb(32, 29, 219);
+  
+}
+a {
+text-decoration: none;
 }
 
 .main {
