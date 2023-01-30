@@ -1,72 +1,75 @@
-
-* {
-  box-sizing: border-box;
-  
+*{
+  padding: 0;
+  margin:0;
 }
-body{
+nav{
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
-  background:linear-gradient(90deg,#00c6fb,#005bea);
 }
-.copyright{
-  display: inline-block;
-  padding-bottom: 4px;
+.navtop{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #41b3a3;
 }
+.navmenu{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type:none;
+  width: 80%;
+}
+.navmenu li{
+  margin-left: 3%;
+  margin-right: 5px;
+  font-size: 150%;
+  padding: 5px;
+}
+main{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
 
-.header{
-  color:rgb(126,145,237);
-  text-align:center;
-  padding: 50px;
-  background-color:rgb(69, 69,69);
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px 5px #c2bbbb;
+  background-image:linear-gradient(to bottom,#41b3a3 60%,#fff);
+  height: 100vh;
 
 }
-
-.menu {
-  float: left;
+.content{
+  width:30%;
+  align-items: center;
+}
+.potray{
+  width:30%;
+  align-items: top;
+}
+.vertical{
   width: 20%;
-  text-align: center;
-  
 }
-.menu1::after{
-  content: " ";
-  clear: both;
-  display: table;
+.vertical p{
+  font-size: 99px;
+  writing-mode:vertical-rl;
+  transform: rotateX(180deg);
+  transform: rotatez(180deg);
+  margin-left: -20%;
+  color:#e27d60;
 }
-
-.menu a {
-  background-color: rgb(69, 69,69);
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: rgb(32, 29, 219);
-  
+.potray img{
+  border-radius: 20%;
+  max-width: 100%;
 }
-a {
-text-decoration: none;
-}
-
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color:rgb(69, 69,69);
-  float: left;
-  width: 20%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: center;
-}
-
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-    float: right;
+@media (max-width: 400px) {
+  .vertical{
+      display: none;
   }
+  main{
+      flex-direction: column-reverse;
+  }
+  .content,.potray{
+      width: 80%;
+  }
+
 }
+
